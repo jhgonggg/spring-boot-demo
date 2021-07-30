@@ -52,3 +52,8 @@ update prod_ext set index = '2' where id in (select id from basicproduct where c
 update prod_ext set index = '10' where id in (select id from basicproduct where chiname like '%中证500%' and ( (secutype >=7000 and secutype< 8000) or (secutype >=1001 and secutype< 6000) ) );
 
 update prod_ext set index = '0' where id in (select id from basicproduct where chiname like '%沪深300%' and ( (secutype >=7000 and secutype< 8000) or (secutype >=1001 and secutype< 6000) ) );
+
+
+-- 初始化
+
+update prod_ext set index = '11' where id in (select id from basicproduct where chiname like '%中证1000%' and ( (secutype >=7000 and secutype< 8000) or (secutype >=1001 and secutype< 6000) ) );
