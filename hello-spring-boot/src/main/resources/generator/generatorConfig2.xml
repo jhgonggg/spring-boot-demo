@@ -7,7 +7,7 @@
     <!-- 引入数据库连接配置 -->
     <properties resource="jdbc.properties"/>
 
-    <context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+    <context id="DB2Tables" targetRuntime="MyBatis3Simple" defaultModelType="flat">
         <property name="beginningDelimiter" value="`"/>
         <property name="endingDelimiter" value="`"/>
 
@@ -20,10 +20,10 @@
 
         <!-- 配置数据库连接 -->
         <jdbcConnection
-                driverClass="${jdbc.driverClass}"
-                connectionURL="${jdbc.connectionURL}"
-                userId="${jdbc.username}"
-                password="${jdbc.password}">
+                driverClass="${database.driverClassName}"
+                connectionURL="${database.url}"
+                userId="${database.username}"
+                password="${database.password}">
         </jdbcConnection>
 
         <!-- 配置实体类存放路径 -->
@@ -39,7 +39,7 @@
                 type="XMLMAPPER"/>
 
         <!-- 配置需要生成的表，% 代表所有 -->
-        <table catalog="cppj" tableName="t_nav_rate">
+        <table catalog="yb" tableName="t_abnm_policy_verification">
             <!-- 配置生成的类继承 BaseEntity-->
             <property name="rootClass" value="com.funtl.hello.spring.boot.base.BaseEntity"/>
 
