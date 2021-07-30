@@ -22,4 +22,6 @@ public class InfoDTO {
 
     private List<YbUser> ybUser;
 
+    private Integer A;
+
 }
